@@ -16,7 +16,12 @@ export class AppSearchComponent {
         this.searchValue = '';
     }
 
+    /*
+     * function onKeyUp
+     * @author: fbricenho
+     */
     public onKeyUp(): void {
+        // TODO:Bounce on keyPress
         this.youtube.search(this.searchValue).subscribe((data) => {
             this.items = data.json().items;
         });
